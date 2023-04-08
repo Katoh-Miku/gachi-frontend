@@ -28,3 +28,8 @@ npm i -D sass
 npm run start
 npm run sass
 ```
+
+## node_moduleファイルをダウンロードする
+```
+npm i
+```
