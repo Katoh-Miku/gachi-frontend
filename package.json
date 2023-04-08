@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
     "start": "reload -d ./src",
     "sass": "sass --watch ./src/styles/:./src/styles/"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "onchange": "^7.1.0",
+    "prettier": "^2.8.7",
     "reload": "^3.2.1",
     "sass": "^1.61.0"
   }

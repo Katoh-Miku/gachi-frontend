@@ -16,6 +16,11 @@ sass
 npm i -D sass
 ```
 
+prettierとonchangeをインストール
+```
+npm i -D prettier onchange
+```
+
 ## package.js内のscriptを編集
 プロジェクトに応じて調節
 ```
