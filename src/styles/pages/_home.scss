@@ -1,0 +1,121 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+
+.travel {
+  @extend .content-width;
+  @extend .mb-lg;
+
+  &__inner {
+    @extend .flex;
+    align-items: end;
+    background-color: $cBgGray;
+    padding: 15px;
+
+    @include mq(md) {
+      padding: 50px;
+    }
+    @include mq(xl) {
+      padding: 50px 120px;
+    }
+  }
+
+  &__img {
+    & > img {
+      opacity: 1;
+    }
+  }
+}
+
+.houses {
+  @extend .content-width;
+  @extend .mb-lg;
+
+  &__inner {
+    @extend .flex;
+  }
+
+  &__item {
+    @include mq(md) {
+      flex-basis: 50%;
+    }
+    @include mq(lg) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__title {
+    @extend .mb-sm;
+    @extend .font-lr;
+  }
+
+  &__btn {
+    text-align: center;
+    flex-basis: 100%;
+  }
+}
+
+.popular {
+  &__header {
+    @extend .content-width;
+  }
+
+  &__inner {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 90%;
+      width: 100%;
+      background-color: $cBgGray;
+    }
+  }
+
+  &__conteiner {
+    position: relative;
+    z-index: 2;
+    @extend .content-width;
+    @extend .flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    @include mq(md) {
+      flex-basis: 47%;
+    }
+    @include mq(lg) {
+      flex-basis: 25%;
+    }
+    @include mq(xl) {
+      flex-basis: 23%;
+    }
+  }
+
+  &__img {
+    height: 150px;
+    margin-bottom: 5px;
+
+    @include mq(lg) {
+      height: 335px;
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    @extend .font-md;
+    @extend .mb-sm;
+  }
+
+  &__btn {
+    text-align: center;
+    flex-basis: 100%;
+    @extend .mb-lg;
+  }
+}
